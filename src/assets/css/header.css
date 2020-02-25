@@ -359,7 +359,7 @@ header {
   height: 60vh;
   color: #ffffff;
   z-index: 10000;
-  background-image: url(../img/Rectangle3-min.png);
+  background-image: url(../img/background-image.jpeg);
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
@@ -371,7 +371,7 @@ header {
 }
 header::after {
   content: "";
-  background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+  background: linear-gradient(90deg, #ec62c2 0%, #fdde59 100%);
   top: 0;
   left: 0;
   bottom: 0;
@@ -420,6 +420,10 @@ header::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.page-header .icon-logo img {
+  width: 50px;
+  margin-right: 3vw;
 }
 .page-header .menu {
   display: none;
@@ -561,30 +565,23 @@ header::after {
     padding: 0;
   }
 }
-.header__content h1 {
-  font-weight: bold;
-  line-height: 6vmin;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+.header__content img {
+  max-width: 40vw;
+  border-radius: 50%;
+  border: solid 4px white;
+  margin: 0 auto;
   text-align: center;
-  display: none;
 }
 @media (min-width: 768px) {
-  .header__content h1 {
+  .header__content img {
     display: block;
     font-size: 50px;
     margin-top: 2em;
   }
 }
 @media (min-width: 1200px) {
-  .header__content h1 {
-    width: 578px;
-    height: 86px;
-    font-size: 72px;
-    line-height: 86px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #ffffff;
+  .header__content img {
+    max-width: 20vw;
     margin-top: 140px;
     display: flex;
     align-items: center;

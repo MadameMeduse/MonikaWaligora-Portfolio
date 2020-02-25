@@ -65,7 +65,7 @@ header {
   height: 60vh;
   color: $white;
   z-index: 10000;
-  background-image: url(../img/Rectangle3-min.png);
+  background-image: url(../img/background-image.jpeg);
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
@@ -76,11 +76,7 @@ header {
 
   &::after {
     content: "";
-    background: linear-gradient(
-      90deg,
-      rgba(213, 32, 71, 0.8) 0%,
-      rgba(238, 61, 27, 0.8) 100%
-    );
+    background: linear-gradient(90deg, $pink 0%, $yellow 100%);
     top: 0;
     left: 0;
     bottom: 0;
@@ -126,6 +122,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    img {
+      width: 50px;
+      margin-right: 3vw;
+    }
   }
 
   .menu {
@@ -290,13 +291,12 @@ header {
     padding: 0;
   }
 
-  h1 {
-    font-weight: bold;
-    line-height: 6vmin;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+  img {
+    max-width: 40vw;
+    border-radius: 50%;
+    border: solid 4px white;
+    margin: 0 auto;
     text-align: center;
-    display: none;
 
     @include respond-to("sm") {
       display: block;
@@ -305,13 +305,7 @@ header {
     }
 
     @include respond-to("lg") {
-      width: 578px;
-      height: 86px;
-      font-size: 72px;
-      line-height: 86px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #ffffff;
+      max-width: 20vw;
       margin-top: 140px;
       @include flexCenter();
     }
