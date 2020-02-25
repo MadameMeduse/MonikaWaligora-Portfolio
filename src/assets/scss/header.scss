@@ -1,0 +1,359 @@
+/* RESET RULES & HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import "main.scss";
+
+:root {
+  --linearBackground: linear-gradient(
+    90deg,
+    rgba(213, 32, 71, 0.8) 0%,
+    rgba(238, 61, 27, 0.8) 100%
+  );
+  --elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  color: inherit;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+body {
+  font: 1.6rem/1.5 "Lato", sans-serif;
+  color: $white;
+  min-height: 100vh;
+}
+
+.active {
+  font-weight: 700;
+}
+
+/* HEADER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+header {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  color: $white;
+  z-index: 10000;
+  background-image: url(../img/Rectangle3-min.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
+
+  @include respond-to("lg") {
+    height: 782px;
+  }
+
+  &::after {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(213, 32, 71, 0.8) 0%,
+      rgba(238, 61, 27, 0.8) 100%
+    );
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.page-header {
+  padding: 1rem;
+  background: transparent;
+  position: absolute;
+  width: 100vw;
+
+  @include flexBetween;
+
+  @include respond-to("md") {
+    padding: 0 116px;
+    height: 100px;
+    top: 17px;
+  }
+
+  @include respond-to("lg") {
+    padding: 0 160px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  .horizontal-logo,
+  .page-header {
+    margin: 0 1em;
+  }
+
+  .icon-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+    margin-left: auto;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 17px;
+
+    li {
+      padding: 0 1em;
+    }
+  }
+
+  .top-menu-wrapper {
+    color: $black;
+  }
+
+  .panel,
+  .top-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 146;
+  }
+
+  .panel1 {
+    width: 100%;
+    background: #ca1f44;
+    transition-delay: 0.3s;
+    z-index: 100;
+  }
+
+  .panel2 {
+    width: calc(100% - 3rem);
+    background: #c21d41;
+    transition-delay: 0.1s;
+    z-index: 100;
+  }
+
+  .top-menu {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 6rem);
+    overflow-y: auto;
+    padding: 2rem;
+    color: $white;
+
+    a {
+      font-size: 14px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $lightBlack;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .top-menu-wrapper.show-offcanvas {
+    &::before {
+      background: var(--overlay);
+      z-index: 1;
+    }
+    .panel,
+    .top-menu {
+      transform: translate3d(0, 0, 0);
+      transition-duration: 0.7s;
+    }
+    .panel1 {
+      transition-delay: 0s;
+    }
+    .panel2 {
+      transition-delay: 0.2s;
+      box-shadow: var(--elementShadow);
+    }
+    .top-menu {
+      transition-delay: 0.4s;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 0 4rem 0.5rem;
+    }
+  }
+
+  /* TOP MENU
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .top-menu li + li {
+    margin-top: 1.5rem;
+  }
+
+  .top-menu > li:last-child {
+    margin-top: auto;
+
+    ul a {
+      display: inline-block;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      transition: color 0.5s ease-out;
+      &:hover {
+        color: $lightBlack;
+        font-weight: 700;
+      }
+    }
+  }
+  .sub-menu {
+    padding: 1.5rem 2rem 0;
+  }
+
+  .top-menu .mob-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    img {
+      max-width: 150px;
+    }
+    i {
+      color: $white;
+      font-size: 2em;
+    }
+  }
+
+  .socials {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    li + li {
+      margin-top: 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .fa-stack {
+      font-size: 1.7rem;
+      color: $lightRed;
+      .fab {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+//-------- Header
+
+.header__content {
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  padding: 5vh 0;
+
+  @include respond-to("lg") {
+    height: 782px;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-weight: bold;
+    line-height: 6vmin;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    display: none;
+
+    @include respond-to("sm") {
+      display: block;
+      font-size: 50px;
+      margin-top: 2em;
+    }
+
+    @include respond-to("lg") {
+      width: 578px;
+      height: 86px;
+      font-size: 72px;
+      line-height: 86px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 140px;
+      @include flexCenter();
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    font-weight: 600;
+    margin: 29px;
+
+    @include respond-to("lg") {
+      width: 540px;
+      top: 382px;
+      font-size: 24px;
+      margin: 39px 0;
+    }
+  }
+  a {
+    margin-bottom: 4vw;
+  }
+
+  button {
+    text-align: center;
+    text-transform: uppercase;
+    width: 160px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ed4c5c;
+    &:hover {
+      background: transparent;
+      border: solid 2px $white;
+      color: $white;
+      font-weight: 700;
+    }
+
+    @include respond-to("lg") {
+      margin: 56px 0;
+    }
+  }
+}

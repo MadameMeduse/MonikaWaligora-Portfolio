@@ -1,0 +1,66 @@
+@import "main.scss";
+
+form {
+  @include respond-to("lg") {
+    width: 540px;
+    height: 305px;
+  }
+  .form__name {
+    display: block;
+    @include respond-to("md") {
+      @include flexBetween;
+    }
+    input {
+      margin-right: 0;
+    }
+  }
+  label {
+    display: none;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(19, 39, 67, 0.5);
+    margin-bottom: 10px;
+    @include respond-to("md") {
+      margin-bottom: 23px;
+      padding: 20px 30px;
+
+      &:first-of-type {
+        margin-right: 23px;
+      }
+    }
+  }
+
+  button {
+    width: 160px;
+    height: 50px;
+    background: $linkRed;
+    border: 1.5px solid $linkRed;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 14px;
+    margin: 2vw auto;
+    background: 0.2s ease;
+    @include flexCenter;
+
+    @include respond-to("md") {
+      margin: 0;
+    }
+    &:hover {
+      background: $white;
+      border: solid 2px $linkRed;
+      color: $linkRed;
+      font-weight: 700;
+    }
+  }
+}
