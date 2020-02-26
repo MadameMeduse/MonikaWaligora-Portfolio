@@ -2,15 +2,6 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import "main.scss";
 
-:root {
-  --linearBackground: linear-gradient(
-    90deg,
-    rgba(213, 32, 71, 0.8) 0%,
-    rgba(238, 61, 27, 0.8) 100%
-  );
-  --elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -65,10 +56,7 @@ header {
   height: 60vh;
   color: $white;
   z-index: 10000;
-  background-image: url(../img/background-image.jpeg);
-  background-size: cover, cover;
-  background-position: top right, top right;
-  background-repeat: no-repeat, no-repeat;
+  background: var(--linearBackground);
 
   @include respond-to("lg") {
     height: 782px;
@@ -76,13 +64,18 @@ header {
 
   &::after {
     content: "";
-    background: linear-gradient(90deg, $pink 0%, $yellow 100%);
+    background: url(../img/background-image.jpeg);
+    background-size: cover, cover;
+    background-position: top right, top right;
+    background-repeat: no-repeat, no-repeat;
+    background-blend-mode: exclusion;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;
+    opacity: 0.5;
   }
 }
 .page-header {
@@ -111,6 +104,8 @@ header {
     position: relative;
     width: 100%;
     text-transform: uppercase;
+    background: var (--linearBackground);
+    z-index: 1000000;
   }
 
   .horizontal-logo,
@@ -122,10 +117,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: signature;
+    font-size: 24px;
+    text-transform: capitalize;
 
     img {
       width: 50px;
-      margin-right: 3vw;
+      margin-right: 2vw;
     }
   }
 
@@ -159,14 +157,14 @@ header {
 
   .panel1 {
     width: 100%;
-    background: #ca1f44;
+    background: $pink;
     transition-delay: 0.3s;
     z-index: 100;
   }
 
   .panel2 {
     width: calc(100% - 3rem);
-    background: #c21d41;
+    background: $yellow;
     transition-delay: 0.1s;
     z-index: 100;
   }
@@ -178,6 +176,23 @@ header {
     overflow-y: auto;
     padding: 2rem;
     color: $white;
+    background: var(--linearBackground);
+
+    &::before {
+      content: "";
+      background: url(../img/background-image.jpeg);
+      background-size: cover, cover;
+      background-position: top right, top right;
+      background-repeat: no-repeat, no-repeat;
+      background-blend-mode: exclusion;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5;
+    }
 
     a {
       font-size: 14px;
@@ -265,7 +280,7 @@ header {
 
     .fa-stack {
       font-size: 1.7rem;
-      color: $lightRed;
+      color: $pink;
       .fab {
         font-size: 1.2rem;
       }
@@ -338,7 +353,7 @@ header {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    color: #ed4c5c;
+    color: $lightBlack;
     &:hover {
       background: transparent;
       border: solid 2px $white;

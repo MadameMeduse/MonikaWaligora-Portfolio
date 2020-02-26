@@ -43,8 +43,8 @@ form {
   button {
     width: 160px;
     height: 50px;
-    background: $linkRed;
-    border: 1.5px solid $linkRed;
+    background: $pink;
+    border: 1.5px solid $pink;
     border-radius: 6px;
     text-transform: uppercase;
     color: $white;
@@ -58,8 +58,8 @@ form {
     }
     &:hover {
       background: $white;
-      border: solid 2px $linkRed;
-      color: $linkRed;
+      border: solid 2px $pink;
+      color: $pink;
       font-weight: 700;
     }
   }
