@@ -53,7 +53,6 @@ body {
 header {
   position: relative;
   width: 100vw;
-  height: 60vh;
   color: $white;
   z-index: 10000;
   background: var(--linearBackground);
@@ -69,6 +68,7 @@ header {
     background-position: top right, top right;
     background-repeat: no-repeat, no-repeat;
     background-blend-mode: exclusion;
+    transform: rotate(180deg) scaleX(-1);
     top: 0;
     left: 0;
     bottom: 0;
@@ -79,21 +79,18 @@ header {
   }
 }
 .page-header {
-  padding: 1rem;
-  background: transparent;
-  position: absolute;
   width: 100vw;
+  padding: 1vw;
 
   @include flexBetween;
 
   @include respond-to("md") {
-    padding: 0 116px;
-    height: 100px;
+    padding: 20px 116px;
     top: 17px;
   }
 
   @include respond-to("lg") {
-    padding: 0 160px;
+    padding: 40px 160px;
   }
 
   nav {
@@ -101,11 +98,10 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    position: relative;
     width: 100%;
     text-transform: uppercase;
-    background: var (--linearBackground);
-    z-index: 1000000;
+    padding: 0 2vw;
+    z-index: 100000;
   }
 
   .horizontal-logo,
@@ -122,8 +118,12 @@ header {
     text-transform: capitalize;
 
     img {
-      width: 50px;
+      width: 30px;
       margin-right: 2vw;
+
+      @include respond-to("md") {
+        width: 50px;
+      }
     }
   }
 
@@ -192,11 +192,16 @@ header {
       position: absolute;
       z-index: -1;
       opacity: 0.5;
+
+      @include respond-to("md") {
+        background: none;
+      }
     }
 
     a {
       font-size: 14px;
       transition: color 0.3s ease;
+      font-weight: 700;
 
       &:hover {
         color: $lightBlack;
@@ -224,7 +229,7 @@ header {
     }
     .top-menu {
       transition-delay: 0.4s;
-      box-shadow: rgba(0, 0, 0, 0.25) 0 0 4rem 0.5rem;
+      box-shadow: rgba(0, 0, 0, 0.55) 0 0 4rem 0.5rem;
     }
   }
 
@@ -258,7 +263,7 @@ header {
     justify-content: space-between;
     margin-bottom: 2rem;
     img {
-      max-width: 150px;
+      max-width: 40px;
     }
     i {
       color: $white;
@@ -307,21 +312,22 @@ header {
   }
 
   img {
-    max-width: 40vw;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 50%;
     border: solid 4px white;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 
     @include respond-to("sm") {
       display: block;
       font-size: 50px;
-      margin-top: 2em;
+      max-width: 200px;
+      max-height: 200px;
     }
 
     @include respond-to("lg") {
-      max-width: 20vw;
-      margin-top: 140px;
+      margin-top: 0;
       @include flexCenter();
     }
   }
@@ -341,6 +347,7 @@ header {
   }
   a {
     margin-bottom: 4vw;
+    max-height: 50px;
   }
 
   button {
@@ -354,11 +361,14 @@ header {
     font-size: 14px;
     line-height: 17px;
     color: $lightBlack;
+    transition: background 0.3s ease;
+
     &:hover {
       background: transparent;
       border: solid 2px $white;
       color: $white;
       font-weight: 700;
+      text-shadow: var(--textShadowFunny);
     }
 
     @include respond-to("lg") {
