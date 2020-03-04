@@ -683,12 +683,12 @@ header::after {
   }
 }
 .header__content img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 180px;
+  max-height: 180px;
   border-radius: 50%;
-  border: solid 4px white;
   margin: 20px auto;
   text-align: center;
+  box-shadow: var(--circuleShadow);
 }
 @media (min-width: 768px) {
   .header__content img {
@@ -737,6 +737,7 @@ header::after {
   line-height: 17px;
   color: #101010;
   transition: background 0.3s ease;
+  box-shadow: var(--circuleShadow);
 }
 .header__content button:hover {
   background: transparent;

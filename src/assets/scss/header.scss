@@ -313,12 +313,12 @@ header {
   }
 
   img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 180px;
+    max-height: 180px;
     border-radius: 50%;
-    border: solid 4px white;
     margin: 20px auto;
     text-align: center;
+    box-shadow: var(--circuleShadow);
 
     @include respond-to("sm") {
       display: block;
@@ -363,6 +363,7 @@ header {
     line-height: 17px;
     color: $lightBlack;
     transition: background 0.3s ease;
+    box-shadow: var(--circuleShadow);
 
     &:hover {
       background: transparent;
