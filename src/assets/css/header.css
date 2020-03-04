@@ -470,12 +470,11 @@ header {
 }
 header::after {
   content: "";
-  background: url(../img/background-image.jpeg);
+  background: url(../img/header__background.png);
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
   background-blend-mode: exclusion;
-  transform: rotate(180deg) scaleX(-1);
   top: 0;
   left: 0;
   bottom: 0;
