@@ -21,6 +21,7 @@
   --textShadowFunny: -3px -3px 0 7px hsl(60, 10%, 65%),
     -4px -4px 0 7px hsl(60, 10%, 65%), -5px -5px 0 7px hsl(60, 10%, 65%),
     -6px -6px 0 7px hsl(60, 10%, 65%);
+  --circuleShadow: 0 15px 20px -12px rgba(0, 0, 0, 0.8);
 }
 
 $black: #000000;
@@ -161,17 +162,17 @@ p {
   width: 300px;
   margin: auto;
   padding: 15px;
-  background: $white;
-  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
 
   @include respond-to("sm") {
-    margin: 2vw 3vw;
+    // margin: 2vw 3vw;
   }
 
   @include respond-to("lg") {
-    margin: 0.5vw;
+    // margin: 0.5vw;
+    // background: #ffffffde;
   }
 
   .feature__item--image {
@@ -185,9 +186,9 @@ p {
       border-radius: 50%;
       margin: auto;
       text-align: center;
-      width: 200px;
-      height: 200px;
-      // background: #d8dcf3;
+      width: 180px;
+      height: 180px;
+      box-shadow: var(--circuleShadow);
       background: $yellow;
     }
   }
@@ -352,6 +353,7 @@ p {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-section {
