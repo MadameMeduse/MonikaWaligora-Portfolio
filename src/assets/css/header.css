@@ -78,10 +78,13 @@ p {
 }
 
 #features {
-  background: var(--linearBackground);
+  background: url(../img/features-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 #features h2 {
-  color: #ffffff;
+  color: #101010;
 }
 
 .features {
@@ -167,6 +170,13 @@ p {
   .feature__item .feature__item--content p {
     padding: 0;
   }
+}
+
+#blog {
+  background: url(../img/blog-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .blog {
@@ -671,13 +681,14 @@ header::after {
   align-items: center;
   width: 100vw;
   flex-direction: column;
-  padding: 5vh 0;
+  padding-bottom: 5vh;
 }
 @media (min-width: 1200px) {
   .header__content {
     height: 782px;
     margin-top: 0;
     padding: 0;
+    justify-content: flex-start;
   }
 }
 .header__content img {
@@ -745,7 +756,7 @@ header::after {
 }
 @media (min-width: 1200px) {
   .header__content button {
-    margin: 56px 0;
+    margin-bottom: 56px;
   }
 }
 

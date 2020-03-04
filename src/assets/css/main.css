@@ -75,10 +75,13 @@ p {
 }
 
 #features {
-  background: var(--linearBackground);
+  background: url(../img/features-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 #features h2 {
-  color: #ffffff;
+  color: #101010;
 }
 
 .features {
@@ -164,6 +167,13 @@ p {
   .feature__item .feature__item--content p {
     padding: 0;
   }
+}
+
+#blog {
+  background: url(../img/blog-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .blog {

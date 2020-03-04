@@ -303,12 +303,13 @@ header {
   align-items: center;
   width: 100vw;
   flex-direction: column;
-  padding: 5vh 0;
+  padding-bottom: 5vh;
 
   @include respond-to("lg") {
     height: 782px;
     margin-top: 0;
     padding: 0;
+    justify-content: flex-start;
   }
 
   img {
@@ -372,7 +373,7 @@ header {
     }
 
     @include respond-to("lg") {
-      margin: 56px 0;
+      margin-bottom: 56px;
     }
   }
 }

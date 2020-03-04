@@ -127,9 +127,12 @@ p {
 //Main
 
 #features {
-  background: var(--linearBackground);
+  background: url(../img/features-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
   h2 {
-    color: $white;
+    color: $lightBlack;
   }
 }
 .features {
@@ -212,7 +215,12 @@ p {
     }
   }
 }
-
+#blog {
+  background: url(../img/blog-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
+}
 .blog {
   color: $lightBlack;
   padding-bottom: 10vh;
