@@ -582,7 +582,7 @@ header::after {
 }
 .page-header .top-menu::before {
   content: "";
-  background: url(../img/background-image.jpeg);
+  background: -o-linear-gradient();
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
