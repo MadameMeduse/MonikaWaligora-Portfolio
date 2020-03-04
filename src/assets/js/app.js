@@ -9,7 +9,7 @@ $(".responsive-slick").slick({
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 1900,
   responsive: [
     {
