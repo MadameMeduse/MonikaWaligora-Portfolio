@@ -135,6 +135,9 @@ p {
   h2 {
     color: $lightBlack;
   }
+  @include respond-to("lg") {
+    height: 705px;
+  }
 }
 .features {
   color: $lightBlack;
@@ -221,6 +224,10 @@ p {
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
+
+  @include respond-to("lg") {
+    height: 705px;
+  }
 }
 .blog {
   color: $lightBlack;
@@ -354,6 +361,12 @@ p {
 .socials {
   display: flex;
   flex-wrap: wrap;
+}
+#contact {
+  background: url(../img/contact-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .contact-section {

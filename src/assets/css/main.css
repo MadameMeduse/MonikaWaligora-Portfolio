@@ -84,6 +84,11 @@ p {
 #features h2 {
   color: #101010;
 }
+@media (min-width: 1200px) {
+  #features {
+    height: 705px;
+  }
+}
 
 .features {
   color: #101010;
@@ -164,6 +169,11 @@ p {
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
+}
+@media (min-width: 1200px) {
+  #blog {
+    height: 705px;
+  }
 }
 
 .blog {
@@ -331,6 +341,13 @@ p {
 .socials {
   display: flex;
   flex-wrap: wrap;
+}
+
+#contact {
+  background: url(../img/contact-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .contact-section {

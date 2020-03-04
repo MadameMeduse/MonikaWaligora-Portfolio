@@ -87,6 +87,11 @@ p {
 #features h2 {
   color: #101010;
 }
+@media (min-width: 1200px) {
+  #features {
+    height: 705px;
+  }
+}
 
 .features {
   color: #101010;
@@ -167,6 +172,11 @@ p {
   background-size: cover, cover;
   background-position: top right, top right;
   background-repeat: no-repeat, no-repeat;
+}
+@media (min-width: 1200px) {
+  #blog {
+    height: 705px;
+  }
 }
 
 .blog {
@@ -334,6 +344,13 @@ p {
 .socials {
   display: flex;
   flex-wrap: wrap;
+}
+
+#contact {
+  background: url(../img/contact-background.png);
+  background-size: cover, cover;
+  background-position: top right, top right;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .contact-section {
@@ -686,7 +703,7 @@ header::after {
   max-width: 180px;
   max-height: 180px;
   border-radius: 50%;
-  margin: 20px auto;
+  margin: 20px auto 0;
   text-align: center;
   box-shadow: var(--circuleShadow);
 }
@@ -728,8 +745,8 @@ header::after {
 .header__content button {
   text-align: center;
   text-transform: uppercase;
-  width: 160px;
-  height: 50px;
+  width: 130px;
+  height: 40px;
   background: #ffffff;
   border-radius: 6px;
   font-weight: 600;
@@ -749,6 +766,8 @@ header::after {
 @media (min-width: 1200px) {
   .header__content button {
     margin-bottom: 56px;
+    width: 160px;
+    height: 50px;
   }
 }
 
