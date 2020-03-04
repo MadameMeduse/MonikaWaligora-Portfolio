@@ -597,7 +597,7 @@ header::after {
 }
 @media (min-width: 992px) {
   .page-header .top-menu::before {
-    background: none;
+    display: none;
   }
 }
 .page-header .top-menu a {
@@ -738,10 +738,9 @@ header::after {
   }
 }
 .header__content a {
-  margin-bottom: 4vw;
-  max-height: 50px;
-}
-.header__content button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   text-transform: uppercase;
   width: 130px;
@@ -749,21 +748,23 @@ header::after {
   background: #ffffff;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 17px;
   color: #101010;
   transition: background 0.3s ease;
   box-shadow: var(--circuleShadow);
 }
-.header__content button:hover {
+.header__content a:hover {
   background: transparent;
   border: solid 2px #ffffff;
   color: #ffffff;
   font-weight: 700;
   text-shadow: var(--textShadowFunny);
+  box-shadow: none;
+  cursor: pointer;
 }
 @media (min-width: 1200px) {
-  .header__content button {
+  .header__content a {
     margin-bottom: 56px;
     width: 160px;
     height: 50px;

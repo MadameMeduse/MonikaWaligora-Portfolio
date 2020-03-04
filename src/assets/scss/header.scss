@@ -193,7 +193,7 @@ header {
       opacity: 0.5;
 
       @include respond-to("md") {
-        background: none;
+        display: none;
       }
     }
 
@@ -346,11 +346,7 @@ header {
     }
   }
   a {
-    margin-bottom: 4vw;
-    max-height: 50px;
-  }
-
-  button {
+    @include flexCenter;
     text-align: center;
     text-transform: uppercase;
     width: 130px;
@@ -358,18 +354,19 @@ header {
     background: #ffffff;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     color: $lightBlack;
     transition: background 0.3s ease;
     box-shadow: var(--circuleShadow);
-
     &:hover {
       background: transparent;
       border: solid 2px $white;
       color: $white;
       font-weight: 700;
       text-shadow: var(--textShadowFunny);
+      box-shadow: none;
+      cursor: pointer;
     }
 
     @include respond-to("lg") {
