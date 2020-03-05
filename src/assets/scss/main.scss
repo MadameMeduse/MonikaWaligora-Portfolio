@@ -129,9 +129,9 @@ p {
 
 #features {
   background: url(../img/features-background.png);
-  background-size: cover, cover;
-  background-position: top right, top right;
-  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
   h2 {
     color: $lightBlack;
   }
@@ -221,9 +221,9 @@ p {
 }
 #blog {
   background: url(../img/blog-background.png);
-  background-size: cover, cover;
-  background-position: top right, top right;
-  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
 
   @include respond-to("lg") {
     height: 705px;
@@ -361,6 +361,10 @@ p {
 .socials {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
+  @include respond-to("md") {
+    margin: 0;
+  }
 }
 #contact {
   background: url(../img/contact-background.png);
@@ -381,9 +385,10 @@ p {
   }
 
   .socials {
-    display: block;
+    @include flexBetween();
     color: $lightBlack;
     font-size: 14px;
+    margin: 0 auto;
 
     li {
       height: 40px;
@@ -392,6 +397,11 @@ p {
       & :hover {
         color: $pink;
       }
+    }
+    @include respond-to("md") {
+      display: block;
+      text-align: left;
+      margin: 0;
     }
   }
 }
