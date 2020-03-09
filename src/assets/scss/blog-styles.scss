@@ -37,7 +37,7 @@ article {
     margin: 4vw auto;
     padding: 2vw;
     @include respond-to("md") {
-      max-width: 50px;
+      max-width: 500px;
     }
   }
 }
@@ -49,8 +49,8 @@ iframe {
   max-width: 100%;
 
   @include respond-to("md") {
-    max-width: 566px;
-    max-height: 343px;
+    max-width: 766px;
+    max-height: 643px;
   }
 }
 

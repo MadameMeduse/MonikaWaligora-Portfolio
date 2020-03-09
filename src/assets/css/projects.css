@@ -427,24 +427,20 @@ p {
   font-size: 12px;
 }
 
-article {
+#template-projects section {
   color: #101010;
   padding: 0 2vw;
   line-height: 1.5;
   max-width: 700px;
   margin: 0 auto;
 }
-article .article__hashtags {
-  text-align: justify;
-  padding-bottom: 3vw;
-}
-article p {
+#template-projects section p {
   text-align: center;
   margin: 10px auto;
   display: flex;
   justify-content: center;
 }
-article h1 {
+#template-projects section h1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,40 +449,23 @@ article h1 {
   padding: 3vw;
   border-top: ridge 1px #101010;
 }
-article h1 :first-of-type {
+#template-projects section h1 :first-of-type {
   border-top: none;
 }
 @media (min-width: 992px) {
-  article h1 {
+  #template-projects section h1 {
     font-size: 2em;
   }
 }
-article img {
+#template-projects section img {
   max-width: 100%;
-  margin: 4vw auto;
+  margin: 0 auto;
   padding: 2vw;
 }
 @media (min-width: 992px) {
-  article img {
-    max-width: 500px;
+  #template-projects section img {
+    max-width: 700px;
   }
 }
 
-iframe {
-  display: flex;
-  margin: 4vw auto;
-  padding: 2vw;
-  max-width: 100%;
-}
-@media (min-width: 992px) {
-  iframe {
-    max-width: 766px;
-    max-height: 643px;
-  }
-}
-
-footer {
-  color: white;
-}
-
-/*# sourceMappingURL=blog-styles.css.map */
+/*# sourceMappingURL=projects.css.map */

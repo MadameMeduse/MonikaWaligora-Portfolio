@@ -12,12 +12,10 @@
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     />
     <link rel="stylesheet" href="src/assets/css/main.css" />
-    <link rel="stylesheet" href="src/assets/css/form.css" />
-    <link rel="stylesheet" href="src/assets/slick/slick.css" />
-    <link rel="stylesheet" href="src/assets/slick/slick-theme.css" />
     <link rel="stylesheet" href="src/assets/css/header.css" />
     <link rel="stylesheet" href="src/assets/css/mediaQueries.css" />
     <link rel="stylesheet" href="src/assets/css/blog-styles.css" />
+    <link rel="stylesheet" href="src/assets/css/projects.css" />
   </head>
 
   <body>
@@ -139,152 +137,159 @@
         </a>
       </div>
     </header>
-    <main>
-      <section id="summit">
-        <article>
-          <h1>Perspektywy Women in Tech Summit</h1>
-          <p>
-            It is the biggest meeting of women in technology, female inventors,
-            innovators, IT students, start-up founders and High profile
-            representatives of high-tech industry, community leaders and policy
-            makers in Eastern-Central Europe and Central Asia. Last year’s
-            edition brought together over 6 300 participants from 52 countries.
-          </p>
-          <iframe
-            width="566"
-            height="343"
-            src="https://www.youtube.com/embed/tayD4LKP940"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            title="Perpektywy Woman in Tech Summit 2019"
-            alt="Perpektywy Woman in Tech Summit 2019"
-          ></iframe>
+    <main id="template-projects">
+      <section id="hangman">
+        <h1>Hangman Game written in JavaScript ES6</h1>
 
-          <div class="article__hashtags">
-            <p>
-              #frontend #web-developer #programming #IT #youtubechannel
-              #programmer #developer #netguru #hellloroman #softwarehouse
-              #learning #studying #girlpower #ITwomen
-            </p>
-          </div>
-        </article>
+        <a href="https://madamemeduse.github.io/Hangman_Game/">
+          <img src="src/assets/img/projects_hangman-game.png" alt="" />
+          <br />
+          Click here to play
+        </a>
+
+        <h2>Architektura aplikacji:</h2>
+        <ol>
+          <li>
+            <h4>
+              Najpierw ustaliłam stan początkowy czyli initialState w którym
+              zawarte jest:
+            </h4>
+          </li>
+          <ul>
+            <li>lives: ilość żyć, liczba</li>
+            <li>used: used z tablicy letters [ ]</li>
+            <li>word: słowo pobrane jako string z API</li>
+          </ul>
+          <li>
+            <h4>
+              Następnie ustaliłam co ma być zawarte w widoku aplikacji: -- >
+              element (zależny od):
+            </h4>
+            <br />
+          </li>
+          <ul>
+            <li>
+              alfabet (used) - widok zmienia się w zależności od wykorzystanych
+              już liter
+            </li>
+            <li>
+              liczba żyć (lives) - zmienia się w zależności od ilości
+              pozostałych żyć
+            </li>
+            <li>
+              słowo (word, used) - zmienia się z zależności od słowa i
+              wykorzystanych liter
+            </li>
+            <li>hangman (lives) - zmienia się w zależności od liczby żyć</li>
+            <li>
+              loading (word) - zmienia się w zależności od słowa. Jeśli słowa
+              nie ma, pokazuje się ładowanie.
+            </li>
+            <li>
+              final screen (lives, word, used) - ekran końcowy w zależności od
+              ilości żyć, słowa i wykorzystanych liter.
+            </li>
+          </ul>
+          <li>
+            <h4>Ustaliłam eventy jakie mają wystąpić w aplikacji:</h4>
+          </li>
+          <li>
+            <h4>Po kliknięciu w literkę</h4>
+          </li>
+          <ul>
+            <li>dodajemy do used</li>
+            <li>jeśli nie pasuje do słowa =></li>
+            <li>lives-- (odejmujemy życie)</li>
+          </ul>
+          <li>
+            <h4>Final screen:</h4>
+          </li>
+
+          <ul>
+            Wygrana jeśli:
+            <li>lives > 0</li>
+            <li>
+              wszystkie literki z word są w used (nie licząc pierwszej i
+              ostatniej)
+            </li>
+          </ul>
+
+          <li>
+            <h4>Słabe strony aplikacji:</h4>
+          </li>
+          <ul>
+            <li>Brak webpacka - wszystkie funkcje w jednym pliku js</li>
+            <li>
+              Wrzucenie projektu na github na sam koniec zamiast na początku (to
+              było bardzo nierozsądne)
+            </li>
+            <li>Gra źle wyświetla się na poziomym widoku komórki</li>
+          </ul>
+
+          <li>
+            <h4>
+              Aby przejść do repozytorium projektu należy kliknąć w link pod
+              spodem:
+            </h4>
+            <a href="https://github.com/MadameMeduse/Hangman_Game"
+              >Click to see repo on github</a
+            >
+          </li>
+        </ol>
       </section>
-      <section id="warsawjs">
-        <article>
-          <h1>Java Script workshops by WarsawJS</h1>
-          <p>
-            WarsawJS is a local community of JavaScript professionals and
-            enthusiasts. They meet every month to talk and debate about their
-            favorite programming language. This community is focused on sharing
-            experience from different fields on which JS is used, from web
-            browsers, to servers, dev tools, mobiles, smart tvs, micro
-            controllers, databases, video games and so on.
-          </p>
-          <p>
-            I had the pleasure to attend Java Script workshops to broaden my
-            programming knowledge in this language. There were many enthusiastic
-            tutors such as @Bartosz Legięć, who managed my team, ready to help
-            us with every problem we find in our project. We spend the whole day
-            coding, sharing experiences and solving problems. It was a huge
-            inspiration for me!
-          </p>
+
+      <section id="cloudbudget">
+        <h1>
+          Landing page build with Figma design using Pixel Perfect approach
+        </h1>
+        <a href="https://madamemeduse.github.io/Webmaster-Task/">
           <img
-            src="src/assets/img/warsawJS.jpg"
-            alt="warsawJS meetup"
-            title="Warsaw JS meetup"
+            src="src/assets/img/Projects__Cloudbudget2.png"
+            alt="cloudbudget"
+            title="cloudbudget"
           />
-          <div class="article__hashtags">
-            <p>
-              #itforwomen #womenintechnology #meetup #programmer #frontend
-              #frontenddev #itjobs#developer #girlpower
-            </p>
-          </div>
-        </article>
+          <br />Click here to see the demo
+        </a>
+        <p></p>
+        <h4>
+          Aby przejść do repozytorium projektu należy kliknąć w link pod spodem:
+        </h4>
+        <a href="https://github.com/MadameMeduse/Webmaster-Task"
+          >Click to see repo on github</a
+        >
       </section>
-      <section id="roman">
-        <article>
-          <h1>Hello Roman means hi Adam!</h1>
-          <p>
-            Roman or @Adam Romański is one of my favourite characters among
-            programmers. And it's not because I had the opportunity to meet him
-            personally and he turned out to be a very nice guy (it sounded like
-            he was not, but he is), but because his YouTube channel @Hello Roman
-            is a masterpiece.
-          </p>
-          <p>
-            I have never watched video tutorials before, because they are
-            usually made by amateurs and are simply deadly boring. Adam / Roman
-            does not say anything that is absolutely necessary to understand a
-            given topic. Translates simply, bluntly and always with an example.
-            At the beginning of my path of disguise, he gave me faith that I
-            would succeed. He had previously worked as a copywriter in
-            advertising agencies and was developing musically as a drummer, so
-            we have almost the same background. And he succeeded. So why
-            wouldn’t I?
-          </p>
-          <p>
-            In mid-May, I had the opportunity to participate in Hello Roman &
-            Friends, the first Meet-up organised by Adam at the @Netguru
-            headquarters in Poznań. It was an extraordinary experience that
-            enriched me with another portion of knowledge about the IT world,
-            and made me realize how a friendly relationship of an employee with
-            a company can be, that does not just support the passion of its
-            people, but actually helps them to realize it.
-          </p>
-          <p>
-            All those who are beginning their adventure with programming, as
-            well as those already a bit more advanced, I encourage you to check
-            out the Hello Roman youtube channel, and listen to one of his jokes
-            at the beginning of each episode ;)
-          </p>
-
-          <iframe
-            width="566"
-            height="343"
-            src="https://www.youtube.com/embed/buQRCVhoaYY"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            alt="Roman and Friends meetup"
-            title="Roman and Friends meetup"
-          ></iframe>
-
-          <div class="article__hashtags">
-            <p>
-              #frontend #web-developer #programming #IT #youtubechannel
-              #programmer #developer #netguru #hellloroman #softwarehouse
-              #learning #studying #girlpower #ITwomen
-            </p>
-          </div>
-        </article>
-      </section>
-      <section id="womanInTech">
-        <article>
-          <h1>Meet-up by Women in Technology</h1>
-          <p>
-            Another productive meeting behind me! Preparations to work in the IT
-            industry is a really exciting and developing journey. This time I've
-            participated in meet-up "How to effectively change the industry for
-            IT" organised by the @Women in Technology. Meet-up was aimed at
-            broadening of the contacts network, delving into recruiters
-            expectations, and personally - it raised my sense of readiness for
-            the IT market. A great initiative of women - for women. Thanks a lot
-            girls!
-          </p>
-
+      <section id="sliderDog">
+        <h1>Slider with React.js and sass</h1>
+        <a href="https://madamemeduse.github.io/slider-dogs">
           <img
-            src="src/assets/img/women-in-technology.jpg"
-            alt="Woman In Technology meetup"
-            title="Woman In Technology meetup"
+            src="src/assets/img/slider-react2.png"
+            alt="Slider with React.js and sass"
+            title="Slider with React.js and sass"
           />
-          <div class="article__hashtags">
-            <p>
-              #itforwomen #womenintechnology #meetup #programmer #frontend
-              #frontenddev #itjobs#developer #girlpower
-            </p>
-          </div>
-        </article>
+          <br />Click here to see the demo
+        </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut
+          corrupti voluptas ullam accusamus, et dicta fugit impedit doloremque,
+          enim itaque laborum sunt vitae! Deserunt beatae velit aliquid dolor
+          assumenda.
+        </p>
+
+        <h4>
+          Aby przejść do repozytorium projektu należy kliknąć w link pod spodem:
+        </h4>
+        <a href="https://github.com/MadameMeduse/Webmaster-Task"
+          >Click to see repo on github</a
+        >
+      </section>
+      <section id="halinaBand">
+        <h1>Upcoming project of my music band website "Halina Band"</h1>
+
+        <img
+          src="src/assets/img/projects__HalinaBand.png"
+          alt="Upcoming project of my music band website Halina Band"
+          title="Upcoming project of my music band website Halina Band"
+        />
       </section>
     </main>
     <footer>
