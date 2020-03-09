@@ -318,6 +318,7 @@ header {
     margin: 20px auto 0;
     text-align: center;
     box-shadow: var(--circuleShadow);
+    background: var(--linearBackground);
 
     @include respond-to("sm") {
       display: block;
@@ -351,21 +352,21 @@ header {
     text-transform: uppercase;
     width: 130px;
     height: 40px;
-    background: #ffffff;
+    background: transparent;
+    border: solid 2px $white;
+    color: $white;
     border-radius: 6px;
     font-weight: 600;
     font-size: 12px;
     line-height: 17px;
-    color: $lightBlack;
     transition: background 0.3s ease;
-    box-shadow: var(--circuleShadow);
     &:hover {
-      background: transparent;
+      background: #ffffff;
+      color: $lightBlack;
       border: solid 2px $white;
-      color: $white;
       font-weight: 700;
       text-shadow: var(--textShadowFunny);
-      box-shadow: none;
+      box-shadow: var(--circuleShadow);
       cursor: pointer;
     }
 

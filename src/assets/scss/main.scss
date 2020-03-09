@@ -125,18 +125,22 @@ p {
   line-height: 150%;
 }
 
+.active {
+  border-bottom: ridge 1px white;
+}
+
 //Main
 
 #features {
   background: url(../img/features-background.png);
   background-size: cover;
-  background-position: top left;
+  background-position: bottom left;
   background-repeat: no-repeat;
   h2 {
     color: $lightBlack;
   }
   @include respond-to("lg") {
-    height: 705px;
+    height: 50vw;
   }
 }
 .features {
@@ -180,10 +184,13 @@ p {
 
   .feature__item--image {
     display: flex;
-    margin: auto;
     height: 60%;
     @include respond-to("lg") {
       padding: 1vw;
+    }
+
+    a {
+      margin: auto;
     }
     img {
       border-radius: 50%;
@@ -226,7 +233,7 @@ p {
   background-repeat: no-repeat;
 
   @include respond-to("lg") {
-    height: 705px;
+    height: 50vw;
   }
 }
 .blog {

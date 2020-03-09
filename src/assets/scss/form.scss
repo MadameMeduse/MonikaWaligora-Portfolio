@@ -53,6 +53,7 @@ form {
     margin: 2vw auto;
     background: 0.2s ease;
     @include flexCenter;
+    transition: all 0.3s ease;
 
     @include respond-to("md") {
       margin: 0;
