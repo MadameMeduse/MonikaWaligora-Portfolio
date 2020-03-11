@@ -466,7 +466,7 @@ article img {
   margin: 4vw auto;
   padding: 2vw;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   article img {
     max-width: 500px;
   }
@@ -474,14 +474,13 @@ article img {
 
 iframe {
   display: flex;
-  margin: 4vw auto;
+  margin: auto;
   padding: 2vw;
   max-width: 100%;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   iframe {
     max-width: 766px;
-    max-height: 643px;
   }
 }
 
