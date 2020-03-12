@@ -103,11 +103,11 @@ a {
 }
 
 h2 {
-  padding: 5vw 0;
+  padding-top: 5vw;
   color: black;
   text-align: center;
-  @include respond-to("lg") {
-    padding: 63px 0;
+  @include respond-to("md") {
+    padding-top: 3vw;
     font-size: 36px;
   }
 }

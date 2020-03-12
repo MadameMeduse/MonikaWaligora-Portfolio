@@ -140,22 +140,43 @@
     <main id="template-projects">
       <section id="hangman">
         <h1>Hangman Game written in JavaScript ES6</h1>
-
-        <a href="https://madamemeduse.github.io/Hangman_Game/">
-          <img src="src/assets/img/projects_hangman-game.png" alt="" />
-          <br />
-          Click here to play
+        <div class="demoRepoLinks">
+          <a href="https://madamemeduse.github.io/Hangman_Game/"
+            ><span class="fa-stack fa-2x">
+              <i class="far fa-play-circle"></i
+            ></span>
+            Click here to see the demo
+          </a>
+          <a href="https://github.com/MadameMeduse/Hangman_Game"
+            ><span class="fa-stack fa-2x">
+              <i class="fab fa-github-square"></i> </span
+            >See repositorium on GitHub</a
+          >
+        </div>
+        <a
+          class="hangman-game-link"
+          href="https://madamemeduse.github.io/Hangman_Game/"
+        >
+          <img
+            src="src/assets/img/projects_hangman-game.png"
+            alt="Hangman game"
+            title="Hangman game"
+          />
         </a>
 
-        <h2>Architektura aplikacji:</h2>
-        <ol>
+        <h4>Architektura aplikacji:</h4>
+        <div class="buttonIcon">
+          <button class="readMoreLessBtn" id="readMore-js">Read more</button>
+        </div>
+
+        <ol class="main-list hidden">
           <li>
             <h4>
               Najpierw ustaliłam stan początkowy czyli initialState w którym
               zawarte jest:
             </h4>
           </li>
-          <ul>
+          <ul class="secondary-list">
             <li>lives: ilość żyć, liczba</li>
             <li>used: used z tablicy letters [ ]</li>
             <li>word: słowo pobrane jako string z API</li>
@@ -165,9 +186,8 @@
               Następnie ustaliłam co ma być zawarte w widoku aplikacji: -- >
               element (zależny od):
             </h4>
-            <br />
           </li>
-          <ul>
+          <ul class="secondary-list">
             <li>
               alfabet (used) - widok zmienia się w zależności od wykorzystanych
               już liter
@@ -196,7 +216,7 @@
           <li>
             <h4>Po kliknięciu w literkę</h4>
           </li>
-          <ul>
+          <ul class="secondary-list">
             <li>dodajemy do used</li>
             <li>jeśli nie pasuje do słowa =></li>
             <li>lives-- (odejmujemy życie)</li>
@@ -205,7 +225,7 @@
             <h4>Final screen:</h4>
           </li>
 
-          <ul>
+          <ul class="secondary-list">
             Wygrana jeśli:
             <li>lives > 0</li>
             <li>
@@ -217,7 +237,7 @@
           <li>
             <h4>Słabe strony aplikacji:</h4>
           </li>
-          <ul>
+          <ul class="secondary-list">
             <li>Brak webpacka - wszystkie funkcje w jednym pliku js</li>
             <li>
               Wrzucenie projektu na github na sam koniec zamiast na początku (to
@@ -225,16 +245,9 @@
             </li>
             <li>Gra źle wyświetla się na poziomym widoku komórki</li>
           </ul>
-
-          <li>
-            <h4>
-              Aby przejść do repozytorium projektu należy kliknąć w link pod
-              spodem:
-            </h4>
-            <a href="https://github.com/MadameMeduse/Hangman_Game"
-              >Click to see repo on github</a
-            >
-          </li>
+          <div class="buttonIcon">
+            <button id="readLess-js">Hide</button>
+          </div>
         </ol>
       </section>
 
@@ -242,49 +255,59 @@
         <h1>
           Landing page build with Figma design using Pixel Perfect approach
         </h1>
+        <div class="demoRepoLinks">
+          <a href="https://madamemeduse.github.io/Webmaster-Task/">
+            <span class="fa-stack fa-2x">
+              <i class="far fa-play-circle"></i>
+            </span>
+            Click here to see the demo
+          </a>
+
+          <a href="https://github.com/MadameMeduse/Webmaster-Task"
+            ><span class="fa-stack fa-2x">
+              <i class="fab fa-github-square"></i>
+            </span>
+            See repositorium on GitHub</a
+          >
+        </div>
         <a href="https://madamemeduse.github.io/Webmaster-Task/">
           <img
             src="src/assets/img/Projects__Cloudbudget2.png"
             alt="cloudbudget"
             title="cloudbudget"
           />
-          <br />Click here to see the demo
         </a>
-        <p></p>
-        <h4>
-          Aby przejść do repozytorium projektu należy kliknąć w link pod spodem:
-        </h4>
-        <a href="https://github.com/MadameMeduse/Webmaster-Task"
-          >Click to see repo on github</a
-        >
       </section>
       <section id="sliderDog">
-        <h1>Slider with React.js and sass</h1>
+        <h1>Slider with React.js and SASS</h1>
+        <div class="demoRepoLinks">
+          <a href="https://madamemeduse.github.io/slider-dogs">
+            <span class="fa-stack fa-2x">
+              <i class="far fa-play-circle"></i> </span
+            >Click here to see the demo</a
+          >
+
+          <a href="https://github.com/MadameMeduse/Webmaster-Task"
+            ><span class="fa-stack fa-2x">
+              <i class="fab fa-github-square"></i> </span
+            >See repositorium on GitHub</a
+          >
+        </div>
         <a href="https://madamemeduse.github.io/slider-dogs">
           <img
             src="src/assets/img/slider-react2.png"
             alt="Slider with React.js and sass"
             title="Slider with React.js and sass"
           />
-          <br />Click here to see the demo
         </a>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut
-          corrupti voluptas ullam accusamus, et dicta fugit impedit doloremque,
-          enim itaque laborum sunt vitae! Deserunt beatae velit aliquid dolor
-          assumenda.
-        </p>
-
-        <h4>
-          Aby przejść do repozytorium projektu należy kliknąć w link pod spodem:
-        </h4>
-        <a href="https://github.com/MadameMeduse/Webmaster-Task"
-          >Click to see repo on github</a
-        >
       </section>
       <section id="halinaBand">
-        <h1>Upcoming project of my music band website "Halina Band"</h1>
-
+        <h1>Upcoming project in React.js of my music band website</h1>
+        <a href="https://github.com/MadameMeduse/Halina-Band"
+          ><span class="fa-stack fa-2x">
+            <i class="fab fa-github-square"></i> </span
+          >See repositorium on GitHub</a
+        >
         <img
           src="src/assets/img/projects__HalinaBand.png"
           alt="Upcoming project of my music band website Halina Band"

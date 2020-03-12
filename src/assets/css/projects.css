@@ -49,13 +49,13 @@ a:hover {
 }
 
 h2 {
-  padding: 5vw 0;
+  padding-top: 5vw;
   color: black;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   h2 {
-    padding: 63px 0;
+    padding-top: 3vw;
     font-size: 36px;
   }
 }
@@ -429,10 +429,14 @@ p {
 
 #template-projects section {
   color: #101010;
-  padding: 0 2vw;
+  padding: 2vw;
   line-height: 1.5;
-  max-width: 700px;
   margin: 0 auto;
+}
+@media (min-width: 992px) {
+  #template-projects section {
+    padding: 5% 20%;
+  }
 }
 #template-projects section p {
   text-align: center;
@@ -447,7 +451,6 @@ p {
   font-size: 1.5em;
   text-align: center;
   padding: 3vw;
-  border-top: ridge 1px #101010;
 }
 #template-projects section h1 :first-of-type {
   border-top: none;
@@ -457,15 +460,99 @@ p {
     font-size: 2em;
   }
 }
+#template-projects section h4 {
+  padding: 1vw;
+  text-align: center;
+}
+#template-projects section a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  align-items: center;
+}
 #template-projects section img {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 2vw;
+  max-width: 70%;
+  margin: 5vw auto;
+  padding: 1vw;
+  box-shadow: var(--elementShadow);
 }
 @media (min-width: 992px) {
   #template-projects section img {
-    max-width: 700px;
+    max-width: 600px;
+    margin: 2vw;
+    max-width: 90%;
   }
+}
+#template-projects section .hidden {
+  display: none;
+}
+#template-projects section .visible {
+  display: block;
+  height: auto;
+}
+#template-projects section .buttonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#template-projects section .buttonIcon button {
+  border: ridge 1px #ec62c2;
+  padding: 5px;
+  margin: 2vw;
+  text-transform: uppercase;
+  width: 130px;
+  height: 40px;
+  background: transparent;
+  border: solid 2px #101010;
+  color: #101010;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  transition: all 0.3s ease;
+}
+#template-projects section .buttonIcon button:hover {
+  color: #ec62c2;
+  border: solid 2px #ec62c2;
+}
+#template-projects section .main-list {
+  padding: 0 5vw;
+  transition: height 350ms ease-in-out;
+}
+#template-projects section .main-list li {
+  padding-left: 10px;
+  list-style: none;
+}
+#template-projects section .secondary-list > li {
+  list-style: disc;
+  padding-left: 20px;
+  list-style-position: inside;
+}
+#template-projects .demoRepoLinks {
+  display: block;
+}
+#template-projects .demoRepoLinks i {
+  font-size: 20px;
+}
+#template-projects .demoRepoLinks span {
+  max-width: 40px;
+  max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #template-projects .demoRepoLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+#template-projects #cloudbudget,
+#template-projects #halinaBand {
+  background: rgba(238, 236, 236, 0.63);
 }
 
 /*# sourceMappingURL=projects.css.map */

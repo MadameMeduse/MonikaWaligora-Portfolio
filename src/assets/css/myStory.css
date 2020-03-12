@@ -427,65 +427,32 @@ p {
   font-size: 12px;
 }
 
-article {
-  color: #101010;
-  padding: 0 2vw;
-  line-height: 1.5;
-  max-width: 700px;
-  margin: 0 auto;
-}
-article .article__hashtags {
-  text-align: justify;
-  padding-bottom: 3vw;
-}
-article p {
-  text-align: center;
-  margin: 10px auto;
-  display: flex;
-  justify-content: center;
-}
-article h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 3vw;
-  border-top: ridge 1px #101010;
-}
-article h1 :first-of-type {
-  border-top: none;
+section {
+  padding: 2vw;
 }
 @media (min-width: 992px) {
-  article h1 {
-    font-size: 2em;
+  section {
+    padding: 5%;
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
-article img {
-  max-width: 100%;
-  margin: 4vw auto;
+section h1 {
+  text-align: center;
+}
+section p {
+  font-size: 16px;
+  text-align: justify;
+}
+section img {
   padding: 2vw;
-}
-@media (min-width: 768px) {
-  article img {
-    max-width: 500px;
-  }
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-iframe {
-  display: flex;
-  margin: auto;
-  padding: 2vw;
-  max-width: 100%;
-}
-@media (min-width: 1200px) {
-  iframe {
-    max-width: 766px;
-  }
-}
-
-footer {
+.footer-section > p,
+span {
   color: white;
 }
 
-/*# sourceMappingURL=blog-styles.css.map */
+/*# sourceMappingURL=myStory.css.map */

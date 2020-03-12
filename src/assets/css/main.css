@@ -49,13 +49,13 @@ a:hover {
 }
 
 h2 {
-  padding: 5vw 0;
+  padding-top: 5vw;
   color: black;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   h2 {
-    padding: 63px 0;
+    padding-top: 3vw;
     font-size: 36px;
   }
 }

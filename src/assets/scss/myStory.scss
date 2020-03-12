@@ -1,0 +1,27 @@
+@import "main.scss";
+
+section {
+  padding: 2vw;
+  @include respond-to("md") {
+    padding: 5%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: justify;
+  }
+  img {
+    padding: 2vw;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.footer-section > p,
+span {
+  color: white;
+}

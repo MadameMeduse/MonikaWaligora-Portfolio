@@ -52,13 +52,13 @@ a:hover {
 }
 
 h2 {
-  padding: 5vw 0;
+  padding-top: 5vw;
   color: black;
   text-align: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   h2 {
-    padding: 63px 0;
+    padding-top: 3vw;
     font-size: 36px;
   }
 }
@@ -480,14 +480,13 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
   position: relative;
-  width: 100vw;
   color: #ffffff;
   z-index: 10000;
   background: var(--linearBackground);
 }
 @media (min-width: 1200px) {
   header {
-    height: 782px;
+    height: 100vh;
   }
 }
 header::after {
@@ -517,7 +516,7 @@ header::after {
 }
 @media (min-width: 992px) {
   .page-header {
-    padding: 20px 116px;
+    padding: 20px 80px;
     top: 17px;
   }
 }
@@ -533,7 +532,6 @@ header::after {
   font-size: 14px;
   width: 100%;
   text-transform: uppercase;
-  padding: 0 2vw;
   z-index: 100000;
 }
 .page-header .horizontal-logo,
@@ -710,13 +708,12 @@ header::after {
   align-items: center;
   width: 100vw;
   flex-direction: column;
-  padding-bottom: 5vh;
+  padding: 5vh 0;
 }
 @media (min-width: 1200px) {
   .header__content {
     height: 782px;
     margin-top: 0;
-    padding: 0;
     justify-content: flex-start;
   }
 }

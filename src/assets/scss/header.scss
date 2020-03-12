@@ -52,13 +52,12 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
   position: relative;
-  width: 100vw;
   color: $white;
   z-index: 10000;
   background: var(--linearBackground);
 
   @include respond-to("lg") {
-    height: 782px;
+    height: 100vh;
   }
 
   &::after {
@@ -84,7 +83,7 @@ header {
   @include flexBetween;
 
   @include respond-to("md") {
-    padding: 20px 116px;
+    padding: 20px 80px;
     top: 17px;
   }
 
@@ -99,7 +98,6 @@ header {
     font-size: 14px;
     width: 100%;
     text-transform: uppercase;
-    padding: 0 2vw;
     z-index: 100000;
   }
 
@@ -302,12 +300,11 @@ header {
   align-items: center;
   width: 100vw;
   flex-direction: column;
-  padding-bottom: 5vh;
+  padding: 5vh 0;
 
   @include respond-to("lg") {
     height: 782px;
     margin-top: 0;
-    padding: 0;
     justify-content: flex-start;
   }
 
