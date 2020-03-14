@@ -430,10 +430,10 @@ p {
 section {
   padding: 2vw;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   section {
     padding: 5%;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
   }
 }
@@ -446,8 +446,13 @@ section p {
 }
 section img {
   padding: 2vw;
-  max-width: 600px;
+  max-width: 100%;
   margin: 0 auto;
+}
+@media (min-width: 992px) {
+  section img {
+    max-width: 600px;
+  }
 }
 
 .footer-section > p,
