@@ -16,7 +16,7 @@
 	padding: 100px 0;
 }
 :root {
-	--linearBackground: linear-gradient(90deg, #ec62c2b7 0%, #fddf59b6 100%);
+	--linearBackground: linear-gradient(90deg, #ec62c2 0%, #fddf59 100%);
 	--elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
 	--textShadowFunny: -3px -3px 0 7px hsl(60, 10%, 65%), -4px -4px 0 7px hsl(60, 10%, 65%),
 		-5px -5px 0 7px hsl(60, 10%, 65%), -6px -6px 0 7px hsl(60, 10%, 65%);
@@ -438,25 +438,25 @@ p {
 .footer-section {
 	background: var(--linearBackground);
 	@include flexCenter();
-	flex-direction: column;
-	padding: 2vw;
-	@include respond-to("lg") {
-		padding: 0.5vw;
-	}
 
 	img {
-		width: 30%;
-		margin: 0 auto;
+		width: 6vw;
+		margin: 0 9px;
 		border-radius: 6px;
-	}
-	p {
-		margin-top: 2vw;
-		@include respond-to("lg") {
-			margin-top: 0.5vw;
+		padding: 1vw;
+		@include respond-to("md") {
+			width: 3vw;
+			padding: 1vw 0;
 		}
 	}
-
+	p,
 	span {
+		padding: 2vw;
+		margin: 0;
 		font-size: 12px;
+		text-align: center;
+		@include respond-to("xs") {
+			padding: 1vw 2vw;
+		}
 	}
 }

@@ -32,3 +32,23 @@ function resizingComplete() {
 document.querySelectorAll('top-menu li').onclick = function() {
 	this.classList.toggle('active');
 };
+
+function stickyNav() {
+	const nav = document.querySelector('.page-header');
+	const bottomOfNav = nav.offsetTop + nav.offsetHeight;
+
+	function fixNav() {
+		if (window.scrollY >= bottomOfNav) {
+			document.body.style.paddingTop = nav.offsetTop + 'px';
+			nav.classList.add('fixed-nav');
+			console.log('nav should be fixed');
+		} else {
+			nav.classList.remove('fixed-nav');
+			document.body.style.paddingTop = '';
+		}
+	}
+
+	window.addEventListener('scroll', fixNav);
+}
+
+stickyNav();

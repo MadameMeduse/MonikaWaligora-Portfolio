@@ -8,7 +8,7 @@
   src: url("../fonts/WalkwaySemiBold.ttf");
 }
 :root {
-  --linearBackground: linear-gradient(90deg, #ec62c2b7 0%, #fddf59b6 100%);
+  --linearBackground: linear-gradient(90deg, #ec62c2 0%, #fddf59 100%);
   --elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
   --textShadowFunny: -3px -3px 0 7px hsl(60, 10%, 65%), -4px -4px 0 7px hsl(60, 10%, 65%),
   	-5px -5px 0 7px hsl(60, 10%, 65%), -6px -6px 0 7px hsl(60, 10%, 65%);
@@ -426,29 +426,31 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 2vw;
-}
-@media (min-width: 1200px) {
-  .footer-section {
-    padding: 0.5vw;
-  }
 }
 .footer-section img {
-  width: 30%;
-  margin: 0 auto;
+  width: 6vw;
+  margin: 0 9px;
   border-radius: 6px;
+  padding: 1vw;
 }
-.footer-section p {
-  margin-top: 2vw;
-}
-@media (min-width: 1200px) {
-  .footer-section p {
-    margin-top: 0.5vw;
+@media (min-width: 992px) {
+  .footer-section img {
+    width: 3vw;
+    padding: 1vw 0;
   }
 }
+.footer-section p,
 .footer-section span {
+  padding: 2vw;
+  margin: 0;
   font-size: 12px;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  .footer-section p,
+.footer-section span {
+    padding: 1vw 2vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

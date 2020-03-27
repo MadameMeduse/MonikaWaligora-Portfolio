@@ -76,6 +76,17 @@ header {
 		opacity: 0.5;
 	}
 }
+.fixed-nav {
+	position: fixed;
+	box-shadow: var(--elementShadow);
+	background: var(--linearBackground);
+	padding: 1vmin !important;
+	height: auto;
+	align-items: center;
+	transition: ease-in-out 0.3, 0.3;
+	top: 0 !important;
+}
+
 .page-header {
 	width: 100vw;
 	padding: 1vw;
@@ -85,10 +96,6 @@ header {
 	@include respond-to("md") {
 		padding: 20px 80px;
 		top: 17px;
-	}
-
-	@include respond-to("lg") {
-		padding: 40px 160px;
 	}
 
 	nav {
