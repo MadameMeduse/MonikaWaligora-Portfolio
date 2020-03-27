@@ -166,13 +166,10 @@ p {
   margin: auto;
 }
 .feature__item .feature__item--image img {
-  border-radius: 50%;
   margin: auto;
   text-align: center;
   width: 180px;
   height: 180px;
-  box-shadow: var(--circuleShadow);
-  background: #fdde59;
 }
 .feature__item .feature__item--content {
   margin: auto;
@@ -513,7 +510,7 @@ header {
 }
 @media (min-width: 1200px) {
   header {
-    height: 100vh;
+    height: auto;
   }
 }
 header::after {
