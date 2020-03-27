@@ -62,9 +62,9 @@ header {
 
 	&::after {
 		content: "";
-		background: url(../img/header__background.png);
-		background-size: cover, cover;
-		background-position: top right, top right;
+		background: url(../img/blog-background.png);
+		background-size: cover;
+		background-position: center;
 		background-repeat: no-repeat, no-repeat;
 		background-blend-mode: exclusion;
 		top: 0;
@@ -74,6 +74,7 @@ header {
 		position: absolute;
 		z-index: -1;
 		opacity: 0.5;
+		transform: rotateX(360deg);
 	}
 }
 .fixed-nav {
