@@ -1,75 +1,87 @@
-$(".top-menu a").click(function() {
-  $(".top-menu-wrapper").removeClass("show-offcanvas");
+$('.top-menu a').click(function() {
+	$('.top-menu-wrapper').removeClass('show-offcanvas');
 });
 
 // Slick -------------->
-$(".responsive-slick").slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 1900,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: "unslick"
-    },
+$('.responsive-slick').slick({
+	dots: true,
+	infinite: true,
+	speed: 300,
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	autoplay: false,
+	autoplaySpeed: 1900,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: 'unslick'
+		},
 
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+		{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		},
+		{
+			breakpoint: 480,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	]
 });
 
 //Red-section slider
 
-$(".center").slick({
-  centerMode: true,
-  centerPadding: "-30px",
-  slidesToShow: 1,
-  autoplay: true,
-  autoplaySpeed: 1900,
-  arrows: false
+$('.center').slick({
+	centerMode: true,
+	centerPadding: '-30px',
+	slidesToShow: 1,
+	autoplay: true,
+	autoplaySpeed: 1900,
+	arrows: false
 });
 
-//Projects section show/hide main-list
+// slide background in scroll
 
-const readMoreBtn = document.getElementById("readMore-js");
-const mainList = document.querySelector(".main-list");
+//ta funkcja ograniczy odpalanie funkcji (co 20 milisekund) tak aby nie przeciązać strony
+function debounce(func, wait = 20, immediate = true) {
+	var timeout;
+	return function() {
+		var context = this,
+			args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+}
 
-readMoreBtn.addEventListener("click", function() {
-  mainList.classList.toggle("visible");
-  mainList.classList.toggle("hidden");
-  $("html,body").animate(
-    {
-      scrollTop: $(".main-list").offset().top
-    },
-    "fast"
-  );
-});
+function slideAtScroll() {
+	const sliderImages = document.querySelectorAll('.slide-in');
 
-const readLessBtn = document.getElementById("readLess-js");
+	function checkSlide(e) {
+		sliderImages.forEach((sliderImage) => {
+			const slideInAt = window.scrollY + window.innerHeight - sliderImage.height / 2;
+			//bottom of the image
+			const imageBottom = sliderImage.offsetTop + sliderImage.height;
+			const isHalfShown = slideInAt > sliderImage.offsetTop;
+			const isNotScrolledPasted = window.scrollY < imageBottom;
+			if (isHalfShown && isNotScrolledPasted) {
+				sliderImage.classList.add('active');
+			} else {
+				sliderImage.classList.remove('active');
+			}
+		});
+	}
 
-readLessBtn.addEventListener("click", function() {
-  mainList.classList.toggle("visible");
-  mainList.classList.toggle("hidden");
-  $("html,body").animate(
-    {
-      scrollTop: $(".hangman-game-link").offset().top
-    },
-    "fast"
-  );
-});
+	window.addEventListener('scroll', debounce(checkSlide));
+}
+slideAtScroll();

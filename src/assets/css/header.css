@@ -13,9 +13,8 @@
 :root {
   --linearBackground: linear-gradient(90deg, #ec62c2b7 0%, #fddf59b6 100%);
   --elementShadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75);
-  --textShadowFunny: -3px -3px 0 7px hsl(60, 10%, 65%),
-    -4px -4px 0 7px hsl(60, 10%, 65%), -5px -5px 0 7px hsl(60, 10%, 65%),
-    -6px -6px 0 7px hsl(60, 10%, 65%);
+  --textShadowFunny: -3px -3px 0 7px hsl(60, 10%, 65%), -4px -4px 0 7px hsl(60, 10%, 65%),
+  	-5px -5px 0 7px hsl(60, 10%, 65%), -6px -6px 0 7px hsl(60, 10%, 65%);
   --circuleShadow: 0 15px 20px -12px rgba(0, 0, 0, 0.8);
 }
 
@@ -80,6 +79,34 @@ p {
 
 .active {
   border-bottom: ridge 1px white;
+}
+
+.align-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.align-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.align-left.slide-in {
+  transform: translateX(-30%) scale(0.95);
+}
+
+.align-right.slide-in {
+  transform: translateX(30%) scale(0.95);
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
 }
 
 #features {
@@ -512,7 +539,7 @@ header::after {
   align-items: center;
   justify-content: space-between;
   /* TOP MENU
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 }
 @media (min-width: 992px) {
   .page-header {
@@ -724,7 +751,7 @@ header::after {
   margin: 20px auto 0;
   text-align: center;
   box-shadow: var(--circuleShadow);
-  background: var(--linearBackground);
+  border: solid 4px;
 }
 @media (min-width: 768px) {
   .header__content img {
