@@ -1,6 +1,6 @@
 # Monika Waligóra Portfolio
 
-<a href="https://madamemeduse.github.io/MonikaWaligora-Portfolio/">Click to see demo</a>
+<a href="https://madamemeduse.github.io/Portfolio/">Click to see demo</a>
 
 # Aby uruchomić stronę należy kliknąć w link do demo powyżej lub:
 
