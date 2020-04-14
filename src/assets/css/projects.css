@@ -576,7 +576,8 @@ p {
 }
 #template-projects #cloudbudget,
 #template-projects #halinaBand,
-#template-projects #drumKit {
+#template-projects #drumKit,
+#template-projects #gallery {
   background: rgba(238, 236, 236, 0.63);
 }
 
