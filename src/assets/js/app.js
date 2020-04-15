@@ -50,39 +50,20 @@ $('.center').slick({
 console.log('it works');
 
 //ta funkcja ograniczy odpalanie funkcji (co 20 milisekund) tak aby nie przeciązać strony
-function debounce(func, wait = 20, immediate = true) {
-	var timeout;
-	return function() {
-		var context = this,
-			args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-}
-AOS.init();
-
-// const sliderSections = document.querySelectorAll('.slide-in');
-
-// function checkSlide(e) {
-// 	sliderSections.forEach((sliderSection) => {
-// 		console.log(sliderSection);
-// 		const slideInAt = window.scrollY + window.innerHeight - sliderSection.height / 3;
-// 		//bottom of the image
-// 		const sectionBottom = sliderSection.offsetTop + sliderSection.height;
-// 		const isHalfShown = slideInAt > sliderSection.offsetTop / 2;
-// 		const isNotScrolledPasted = window.scrollY < sectionBottom;
-// 		if (isHalfShown && isNotScrolledPasted) {
-// 			sliderSection.classList.toggle('slide-active');
-// 		} else {
-// 			sliderSection.classList.toggle('slide-active');
-// 		}
-// 	});
+// function debounce(func, wait = 20, immediate = true) {
+// 	var timeout;
+// 	return function() {
+// 		var context = this,
+// 			args = arguments;
+// 		var later = function() {
+// 			timeout = null;
+// 			if (!immediate) func.apply(context, args);
+// 		};
+// 		var callNow = immediate && !timeout;
+// 		clearTimeout(timeout);
+// 		timeout = setTimeout(later, wait);
+// 		if (callNow) func.apply(context, args);
+// 	};
 // }
 
-// window.addEventListener('scroll', debounce(checkSlide));
+AOS.init();
