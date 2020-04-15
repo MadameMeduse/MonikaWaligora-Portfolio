@@ -53,7 +53,7 @@ console.log('it works');
 // function debounce(func, wait = 20, immediate = true) {
 // 	var timeout;
 // 	return function() {
-// 		var context = this,
+// 		var context = this,git
 // 			args = arguments;
 // 		var later = function() {
 // 			timeout = null;
