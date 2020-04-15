@@ -55,6 +55,17 @@
 			}
 		}
 
+		ul {
+			list-style: disc;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			list-style-position: inside;
+			li {
+				padding: 0.5vw;
+			}
+		}
+
 		.active {
 			display: block !important;
 			height: auto;

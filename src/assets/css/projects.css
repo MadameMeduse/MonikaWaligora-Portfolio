@@ -510,6 +510,16 @@ p {
     max-width: 90%;
   }
 }
+#template-projects section ul {
+  list-style: disc;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-position: inside;
+}
+#template-projects section ul li {
+  padding: 0.5vw;
+}
 #template-projects section .active {
   display: block !important;
   height: auto;
