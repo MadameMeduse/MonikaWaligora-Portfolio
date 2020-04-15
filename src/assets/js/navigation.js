@@ -41,7 +41,6 @@ function stickyNav() {
 		if (window.scrollY >= bottomOfNav) {
 			document.body.style.paddingTop = nav.offsetTop + 'px';
 			nav.classList.add('fixed-nav');
-			console.log('nav should be fixed');
 		} else {
 			nav.classList.remove('fixed-nav');
 			document.body.style.paddingTop = '';

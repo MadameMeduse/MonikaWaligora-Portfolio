@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="src/assets/css/mediaQueries.css" />
     <link rel="stylesheet" href="src/assets/css/projects.css" />
     <link rel="stylesheet" href="src/assets/css/blog-styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
+
   </head>
 
   <body>
@@ -137,7 +139,8 @@
       </div>
     </header>
     <main>
-      <section id="features">
+<div data-aos="fade-up">
+    <section id="features" >
         <h2>Overwiev</h2>
         <div class="features">
           <div class="responsive-slick">
@@ -227,7 +230,9 @@
           </div>
         </div>
       </section>
-      <section id="blog">
+</div>
+<div data-aos="fade-up">
+    <section id="blog">
         <h2>Blog</h2>
         <div class="blog">
           <div class="responsive-slick">
@@ -323,7 +328,9 @@
           </div>
         </div>
       </section>
-      <section id="projects">
+</div>
+<div data-aos="fade-up">
+    <section id="projects">
         <div class="projects-section">
           <div class="projects-section__content">
             <a href="projects.html">
@@ -474,7 +481,9 @@
           </div>
         </div>
       </section>
-      <section id="contact">
+</div>
+<div data-aos="fade-up">
+    <section id="contact">
         <div class="contact-section">
           <div class="contact-section__content">
             <h1>Contact</h1>
@@ -507,14 +516,14 @@
                   <span>E-mail</span>
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="tel:+48796307038">
                   <span class="fa-stack fa-2x">
                     <i class="fas fa-mobile-alt fa-stack-1x"></i>
                   </span>
                   <span>Call me</span>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="contact-section__form">
@@ -563,6 +572,7 @@
           </div>
         </div>
       </section>
+</div>
     </main>
     <footer>
       <div class="footer-section">
@@ -579,9 +589,11 @@
       </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="src/assets/slick/slick.js"></script>
     <script src="src/assets/js/app.js"></script>
     <script src="src/assets/js/navigation.js"></script>
     <script src="src/assets/js/form.js"></script>
+
   </body>
 </html>

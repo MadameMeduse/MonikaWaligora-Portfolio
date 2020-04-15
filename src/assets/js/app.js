@@ -47,6 +47,8 @@ $('.center').slick({
 
 // slide background in scroll
 
+console.log('it works');
+
 //ta funkcja ograniczy odpalanie funkcji (co 20 milisekund) tak aby nie przeciązać strony
 function debounce(func, wait = 20, immediate = true) {
 	var timeout;
@@ -63,25 +65,24 @@ function debounce(func, wait = 20, immediate = true) {
 		if (callNow) func.apply(context, args);
 	};
 }
+AOS.init();
 
-function slideAtScroll() {
-	const sliderImages = document.querySelectorAll('.slide-in');
+// const sliderSections = document.querySelectorAll('.slide-in');
 
-	function checkSlide(e) {
-		sliderImages.forEach((sliderImage) => {
-			const slideInAt = window.scrollY + window.innerHeight - sliderImage.height / 2;
-			//bottom of the image
-			const imageBottom = sliderImage.offsetTop + sliderImage.height;
-			const isHalfShown = slideInAt > sliderImage.offsetTop;
-			const isNotScrolledPasted = window.scrollY < imageBottom;
-			if (isHalfShown && isNotScrolledPasted) {
-				sliderImage.classList.add('active');
-			} else {
-				sliderImage.classList.remove('active');
-			}
-		});
-	}
+// function checkSlide(e) {
+// 	sliderSections.forEach((sliderSection) => {
+// 		console.log(sliderSection);
+// 		const slideInAt = window.scrollY + window.innerHeight - sliderSection.height / 3;
+// 		//bottom of the image
+// 		const sectionBottom = sliderSection.offsetTop + sliderSection.height;
+// 		const isHalfShown = slideInAt > sliderSection.offsetTop / 2;
+// 		const isNotScrolledPasted = window.scrollY < sectionBottom;
+// 		if (isHalfShown && isNotScrolledPasted) {
+// 			sliderSection.classList.toggle('slide-active');
+// 		} else {
+// 			sliderSection.classList.toggle('slide-active');
+// 		}
+// 	});
+// }
 
-	window.addEventListener('scroll', debounce(checkSlide));
-}
-slideAtScroll();
+// window.addEventListener('scroll', debounce(checkSlide));

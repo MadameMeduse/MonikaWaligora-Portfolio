@@ -121,32 +121,14 @@ p {
 
 //slide In backgound animation
 
-.align-left {
-	float: left;
-	margin-right: 20px;
-}
-
-.align-right {
-	float: right;
-	margin-left: 20px;
-}
-
 .slide-in {
 	opacity: 0;
 	transition: all .5s;
+	transform: translateY(30%);
 }
-
-.align-left.slide-in {
-	transform: translateX(-30%) scale(0.95);
-}
-
-.align-right.slide-in {
-	transform: translateX(30%) scale(0.95);
-}
-
-.slide-in.active {
+.slide-active {
 	opacity: 1;
-	transform: translateX(0%) scale(1);
+	transform: translateY(0%);
 }
 
 //Main
@@ -415,7 +397,8 @@ p {
 		@include flexBetween();
 		color: $lightBlack;
 		font-size: 14px;
-		margin: 0 auto;
+		justify-content: flex-start;
+		margin: 0;
 
 		li {
 			height: 40px;
@@ -424,11 +407,6 @@ p {
 			& :hover {
 				color: $pink;
 			}
-		}
-		@include respond-to("md") {
-			display: block;
-			text-align: left;
-			margin: 0;
 		}
 	}
 }

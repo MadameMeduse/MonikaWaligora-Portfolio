@@ -78,32 +78,15 @@ p {
   border-bottom: ridge 1px white;
 }
 
-.align-left {
-  float: left;
-  margin-right: 20px;
-}
-
-.align-right {
-  float: right;
-  margin-left: 20px;
-}
-
 .slide-in {
   opacity: 0;
   transition: all 0.5s;
+  transform: translateY(30%);
 }
 
-.align-left.slide-in {
-  transform: translateX(-30%) scale(0.95);
-}
-
-.align-right.slide-in {
-  transform: translateX(30%) scale(0.95);
-}
-
-.slide-in.active {
+.slide-active {
   opacity: 1;
-  transform: translateX(0%) scale(1);
+  transform: translateY(0%);
 }
 
 #features {
@@ -404,7 +387,8 @@ p {
   justify-content: space-between;
   color: #101010;
   font-size: 14px;
-  margin: 0 auto;
+  justify-content: flex-start;
+  margin: 0;
 }
 .contact-section .socials li {
   height: 40px;
@@ -412,13 +396,6 @@ p {
 }
 .contact-section .socials li :hover {
   color: #ec62c2;
-}
-@media (min-width: 992px) {
-  .contact-section .socials {
-    display: block;
-    text-align: left;
-    margin: 0;
-  }
 }
 
 .footer-section {
