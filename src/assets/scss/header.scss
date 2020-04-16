@@ -311,16 +311,14 @@ header {
 	padding: 5vh 0;
 
 	@include respond-to("lg") {
-		height: 782px;
-		margin-top: 0;
-		justify-content: flex-start;
+		height: calc(100vh - 90px);
+		justify-content: center;
 	}
 
 	img {
 		max-width: 180px;
 		max-height: 180px;
 		border-radius: 50%;
-		margin: 20px auto 0;
 		text-align: center;
 		box-shadow: var(--circuleShadow);
 		border: solid 4px;
