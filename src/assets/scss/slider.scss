@@ -23,7 +23,7 @@ $breakpoints: (
 	overflow: hidden;
 
 	@include respond-to("sm") {
-		height: 400px;
+		height: 500px;
 	}
 }
 
