@@ -61,7 +61,7 @@ header {
 
   &::after {
     content: "";
-    background: url(../img/blog-background.png);
+    background: url(../img/header.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat, no-repeat;
@@ -84,6 +84,7 @@ header {
   align-items: center;
   transition: ease-in-out 0.3, 0.3;
   top: 0 !important;
+  color: $white !important;
 }
 
 .page-header {
@@ -310,7 +311,7 @@ header {
   padding: 5vh 0;
 
   @include respond-to("lg") {
-    height: calc(90vh - 90px);
+    height: calc(100vh - 90px);
     justify-content: end;
     align-items: flex-start;
     display: flex;
@@ -341,7 +342,7 @@ header {
     }
   }
   p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 150%;
     text-align: center;
     font-weight: 600;
