@@ -1,137 +1,137 @@
 @import "main.scss";
 
 #template-projects {
-	section {
-		color: $lightBlack;
-		padding: 2vw;
-		line-height: 1.5;
-		margin: 0 auto;
+  section {
+    color: $lightBlack;
+    padding: 2vw;
+    line-height: 1.5;
+    margin: 0 auto;
 
-		@include respond-to("md") {
-			padding: 1% 20%;
-		}
+    @include respond-to("md") {
+      padding: 1% 20%;
+    }
 
-		p {
-			text-align: center;
-			margin: 10px auto;
-			display: flex;
-			justify-content: center;
-		}
-		h1 {
-			@include flexCenter;
-			font-size: 1.5em;
-			text-align: center;
-			padding: 3vw;
-			//   border-top: ridge 1px $lightBlack;
+    p {
+      text-align: center;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+    }
+    h1 {
+      @include flexCenter;
+      font-size: 1.5em;
+      text-align: center;
+      padding: 3vw;
+      //   border-top: ridge 1px $lightBlack;
 
-			:first-of-type {
-				border-top: none;
-			}
-			@include respond-to("md") {
-				font-size: 2em;
-			}
-		}
-		h4 {
-			padding: 1vw;
-			text-align: center;
-		}
-		a {
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			margin: 0;
-			align-items: center;
-		}
+      :first-of-type {
+        border-top: none;
+      }
+      @include respond-to("md") {
+        font-size: 2em;
+      }
+    }
+    h4 {
+      padding: 1vw;
+      text-align: center;
+    }
+    a {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      align-items: center;
+    }
 
-		img {
-			max-width: 70%;
-			margin: 5vw auto;
-			padding: 1vw;
-			box-shadow: var(--elementShadow);
-			@include respond-to("md") {
-				max-width: 600px;
-				margin: 2vw;
-				max-width: 90%;
-			}
-		}
+    img {
+      max-width: 70%;
+      margin: 5vw auto;
+      padding: 1vw;
+      box-shadow: var(--elementShadow);
+      @include respond-to("md") {
+        max-width: 600px;
+        margin: 2vw;
+        max-width: 90%;
+      }
+    }
 
-		ul {
-			list-style: disc;
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			list-style-position: inside;
-			li {
-				padding: 0.5vw;
-			}
-		}
+    ul {
+      list-style: disc;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style-position: inside;
+      li {
+        padding: 0.5vw;
+      }
+    }
 
-		.active {
-			display: block !important;
-			height: auto;
-		}
-		.buttonIcon {
-			@include flexCenter;
-			flex-direction: column;
-			button {
-				border: ridge 1px $pink;
-				padding: 5px;
-				margin: 2vw;
-				text-transform: uppercase;
-				width: 130px;
-				height: 40px;
-				background: transparent;
-				border: solid 2px $lightBlack;
-				color: $lightBlack;
-				border-radius: 6px;
-				font-weight: 600;
-				font-size: 12px;
-				line-height: 17px;
-				transition: all 0.3s ease;
-				&:hover {
-					color: $pink;
-					border: solid 2px $pink;
-				}
-			}
-		}
-		.main-list {
-			padding: 0 5vw;
-			transition: height 350ms ease-in-out;
-			display: none;
-			& li {
-				padding-left: 10px;
-				list-style: none;
-			}
-		}
-		.secondary-list > li {
-			list-style: disc;
-			padding-left: 20px;
-			list-style-position: inside;
-		}
-	}
+    .active {
+      display: block !important;
+      height: auto;
+    }
+    .buttonIcon {
+      @include flexCenter;
+      flex-direction: column;
+      button {
+        border: ridge 1px $pink;
+        padding: 5px;
+        margin: 2vw;
+        text-transform: uppercase;
+        width: 130px;
+        height: 40px;
+        background: transparent;
+        border: solid 2px $lightBlack;
+        color: $lightBlack;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 17px;
+        transition: all 0.3s ease;
+        &:hover {
+          color: $pink;
+          border: solid 2px $pink;
+        }
+      }
+    }
+    .main-list {
+      padding: 0 5vw;
+      transition: height 350ms ease-in-out;
+      display: none;
+      & li {
+        padding-left: 10px;
+        list-style: none;
+      }
+    }
+    .secondary-list > li {
+      list-style: disc;
+      padding-left: 20px;
+      list-style-position: inside;
+    }
+  }
 
-	.demoRepoLinks {
-		display: block;
-		i {
-			font-size: 20px;
-		}
-		span {
-			max-width: 40px;
-			max-height: 60px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
+  .demoRepoLinks {
+    display: block;
+    i {
+      font-size: 20px;
+    }
+    span {
+      max-width: 40px;
+      max-height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-		@include respond-to("sm") {
-			@include flexCenter;
-		}
-	}
+    @include respond-to("sm") {
+      @include flexCenter;
+    }
+  }
 
-	#cloudbudget,
-	#halinaBand,
-	#drumKit,
-	#gallery {
-		background: rgba(238, 236, 236, 0.63);
-	}
+  #cloudbudget,
+  #halinaBand,
+  #drumKit,
+  #gallery {
+    background: rgba(238, 236, 236, 0.63);
+  }
 }
